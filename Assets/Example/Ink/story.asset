@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaf58458a6242a88acc9685915d2c9a, type: 3}
+  m_Name: story
+  m_EditorClassIdentifier: 
+  m_InkFileAssets:
+  - {fileID: 102900000, guid: 3e5ed74be0cff49df988d051cb893be0, type: 3}
+  m_Searches:
+  - m_Name: Todos
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x2'
+    m_ExistCount: 0
+    m_Search: ^.*(TODO.*)\s*$
+    m_Result: $1
+  - m_Name: Choices
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x4'
+    m_ExistCount: 4
+    m_Search: ^.*[\+\*]\s*\[\s*([\w-]+).*$
+    m_Result: $1
+  - m_Name: Commands
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x4'
+    m_ExistCount: 4
+    m_Search: ^[\s-]*(\([^\)]+\))?[\s-]*\/(\w+).*$
+    m_Result: $2
+  - m_Name: Actions
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x2'
+    m_ExistCount: 2
+    m_Search: ^[\s-]*(\([^\)]+\))?[\s-]*\/action\s+([\w-]+)\s*$
+    m_Result: $2
+  - m_Name: Characters
+    m_Bucket: {fileID: 11400000, guid: e20f4947357962d4daa2f5812692382b, type: 2}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x1/2'
+    m_ExistCount: 1
+    m_Search: ^[\s-]*(\([^\)]+\))?[\s-]*(\/perform|\/character\s+(\w+))(\s+(\w+)(\s+(\w+))?)?\s*$
+    m_Result: $3|$7
+  - m_Name: Performances
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x3'
+    m_ExistCount: 3
+    m_Search: ^[\s-]*(\([^\)]+\))?[\s-]*(\/perform|\/character\s+(\w+))\s+(\w+).*$
+    m_Result: $4
+  - m_Name: Scenes
+    m_Bucket: {fileID: 0}
+    m_ShowGUI: 1
+    m_ShowOptions: 0
+    m_CountDisplay: ' x3'
+    m_ExistCount: 3
+    m_Search: ^[\s-]*(\([^\)]+\))?[\s-]*\/scene\s+([\w\.]+).*$
+    m_Result: $2
+  m_MissingOnly: 0
+  m_ScrollPos: {x: 0, y: 0}
+  m_ShowSummaryByFile: 0
